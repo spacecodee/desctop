@@ -1,0 +1,87 @@
+.main-color {
+    -fx-background-color: #2a292f;
+}
+
+.lateral-color {
+    -fx-background-color: #1c1c1c;
+}
+
+@font-face {
+    font-family: "OpenSans bold";
+    font-style: bold;
+    font-weight: 900;
+    src: url("/assets/fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Gilroy normal";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/OpenSans-Regular.ttf");
+}
+
+.font-normal {
+    -fx-font-family: "Gilroy normal";
+    -fx-font-weight: 400;
+}
+
+.font-bold {
+    -fx-font-family: "OpenSans bold";
+    -fx-font-weight: 900;
+}
+
+/*Text*/
+.text-title {
+    -fx-text-fill: #fefefe;
+    -fx-font-size: 20px;
+}
+
+.text-normal,
+.text-money {
+    -fx-text-fill: #fefefe;
+    -fx-font-size: 16px;
+}
+
+.text-money {
+    -fx-text-fill: #8c62d9;
+}
+
+/*Buttons*/
+.custom-button {
+    -fx-background-color: #333333;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 10px;
+}
+
+/*Box custom*/
+.box-price {
+    -fx-background-color: #333333;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 10px;
+}
+
+.box-genre {
+    -fx-padding: 5px 10px;
+    -fx-border-color: #333333;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+}
+
+.box-genre-new {
+    -fx-background-color: #333333;
+    -fx-background-radius: 10px;
+}
+
+/*Custom slide*/
+#custom-slider .thumb {
+    /*-fx-background-image: url("https://i.imgur.com/SwDjIg7.png");
+    -fx-background-color: transparent;*/
+
+    -fx-padding: 10px;
+}
+
+#custom-slider .track {
+    -fx-background-color: #8c62d9;
+}
+
+/**/
