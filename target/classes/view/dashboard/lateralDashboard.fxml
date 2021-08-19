@@ -2,7 +2,7 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
@@ -10,16 +10,17 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 
-<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="300.0" spacing="40.0" styleClass="lateral-color" stylesheets="@../../assets/style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.LateralDashboard">
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" styleClass="lateral-color" stylesheets="@../../assets/style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.LateralDashboard">
     <children>
         <ImageView fx:id="imgProfile" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
             <image>
                 <Image url="@../../assets/img/beautiful-woman.jpg" />
             </image>
         </ImageView>
+      <Line endX="100.0" fill="#333333" startX="-100.0" stroke="#333333" strokeWidth="2.0" />
       <VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" VBox.vgrow="ALWAYS">
          <children>
             <Label text="Precios">
@@ -78,80 +79,47 @@
             <Slider id="custom-slider" fx:id="slideMaxPrice" blockIncrement="2.0" layoutX="10.0" layoutY="130.0" majorTickUnit="10.0" max="1000.0" minorTickCount="2" snapToTicks="true" value="1000.0" />
          </children>
       </VBox>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+      <Line endX="100.0" fill="#333333" startX="-100.0" stroke="#333333" strokeWidth="2.0" />
+      <VBox spacing="10.0">
          <children>
-            <Label text="Géneros">
+            <Label text="Géneros" VBox.vgrow="ALWAYS">
                <styleClass>
                   <String fx:value="font-normal" />
                   <String fx:value="text-normal" />
                </styleClass>
             </Label>
-            <GridPane hgap="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" vgap="15.0">
+            <GridPane fx:id="gridGenre" alignment="TOP_CENTER" hgap="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" vgap="15.0" VBox.vgrow="ALWAYS">
               <columnConstraints>
                   <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-              </rowConstraints>
-               <children>
-                  <Label fx:id="lblRpg" alignment="CENTER" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="RPG" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                     <styleClass>
-                        <String fx:value="box-genre" />
-                        <String fx:value="font-normal" />
-                        <String fx:value="text-normal" />
-                     </styleClass>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Label>
-                  <Label fx:id="lblShooter" alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Disparos" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                     <styleClass>
-                        <String fx:value="box-genre" />
-                        <String fx:value="font-normal" />
-                        <String fx:value="text-normal" />
-                     </styleClass>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Label>
-                  <Label fx:id="lblSurvival" alignment="CENTER" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Survival" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                     <styleClass>
-                        <String fx:value="box-genre" />
-                        <String fx:value="font-normal" />
-                        <String fx:value="text-normal" />
-                     </styleClass>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Label>
-                  <Label fx:id="lblStrategy" alignment="CENTER" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Estrategia" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                     <styleClass>
-                        <String fx:value="box-genre" />
-                        <String fx:value="font-normal" />
-                        <String fx:value="text-normal" />
-                     </styleClass>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Label>
-                  <Label fx:id="lblOpenWorld" alignment="CENTER" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Mundo Abierto" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                     <styleClass>
-                        <String fx:value="box-genre" />
-                        <String fx:value="font-normal" />
-                        <String fx:value="text-normal" />
-                     </styleClass>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Label>
-               </children>
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </GridPane>
+         </children>
+      </VBox>
+      <Line endX="100.0" fill="#333333" startX="-100.0" stroke="#333333" strokeWidth="2.0" />
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="Precios">
+               <styleClass>
+                  <String fx:value="font-bold" />
+                  <String fx:value="text-title" />
+               </styleClass>
+            </Label>
+            <CheckBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Nuevos proyectos" VBox.vgrow="ALWAYS">
+               <styleClass>
+                  <String fx:value="font-normal" />
+                  <String fx:value="text-normal" />
+               </styleClass>
+            </CheckBox>
+            <CheckBox layoutX="10.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Proyectos lanzados">
+               <styleClass>
+                  <String fx:value="font-normal" />
+                  <String fx:value="text-normal" />
+               </styleClass>
+            </CheckBox>
          </children>
       </VBox>
     </children>

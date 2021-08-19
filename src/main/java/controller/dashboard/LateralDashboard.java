@@ -1,12 +1,16 @@
 package controller.dashboard;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
 import utils.Images;
 
 import java.net.URL;
@@ -30,19 +34,7 @@ public class LateralDashboard implements Initializable {
     private Slider slideMaxPrice;
 
     @FXML
-    private Label lblRpg;
-
-    @FXML
-    private Label lblShooter;
-
-    @FXML
-    private Label lblSurvival;
-
-    @FXML
-    private Label lblStrategy;
-
-    @FXML
-    private Label lblOpenWorld;
+    private GridPane gridGenre;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -50,29 +42,58 @@ public class LateralDashboard implements Initializable {
 
         slideMinPrice.valueProperty().addListener((ov, oldVal, newVal) -> lblMinPrice.setText(this.roundNumbers(newVal)));
         slideMaxPrice.valueProperty().addListener((ov, oldVal, newVal) -> lblMaxPrice.setText(this.roundNumbers(newVal)));
-        this.boxGenre();
+        //this.boxGenre();
+        this.addGridPaneGenre();
     }
 
     private String roundNumbers(Number num) {
         return String.valueOf(Math.round((Double) num));
     }
 
-    private void boxGenre() {
-        Label[] labels = {
-                this.lblRpg, this.lblShooter, this.lblSurvival, this.lblStrategy, this.lblOpenWorld
+    private void addGridPaneGenre() {
+        var column = 0;
+        var row = 0;
+        String[] genres = {
+                "RPG", "Disparos", "Estrategía", "Survival", "Mundo Abierto"
         };
 
-        for (int i = 0; i < labels.length; i++) {
-            int finalI = i;
-            labels[i].setOnMouseClicked(e -> {
+        for (String genre : genres) {
+            Label label = this.customLabel(genre);
+
+            if (column == 2) {
+                column = 0;
+                row++;
+            }
+
+            //add listener
+            label.setOnMouseClicked(e -> {
                 try {
-                    if (labels[finalI].getStyleClass().get(4).equalsIgnoreCase("box-genre-new")) {
-                        labels[finalI].getStyleClass().remove(4);
+                    if (label.getStyleClass().get(4).equalsIgnoreCase("box-genre-new")) {
+                        label.getStyleClass().remove(4);
                     }
                 } catch (Exception ex) {
-                    labels[finalI].getStyleClass().add("box-genre-new");
+                    label.getStyleClass().add("box-genre-new");
                 }
             });
+
+            this.gridGenre.add(label, column++, row);
+            GridPane.setVgrow(label, Priority.ALWAYS);
+            GridPane.setHgrow(label, Priority.ALWAYS);
+            GridPane.setMargin(this.gridGenre, new Insets(0));
         }
+    }
+
+    private Label customLabel(String label) {
+        var lbl = new Label(label);
+        lbl.getStyleClass().addAll("box-genre", "font-normal", "text-normal");
+        lbl.setMinHeight(Region.USE_PREF_SIZE);
+        lbl.setMinWidth(Region.USE_PREF_SIZE);
+        lbl.setPrefWidth(Region.USE_COMPUTED_SIZE);
+        lbl.setPrefHeight(Region.USE_COMPUTED_SIZE);
+        lbl.setMaxWidth(118);
+        lbl.setMaxHeight(40);
+        lbl.setAlignment(Pos.CENTER);
+        lbl.setCursor(Cursor.HAND);
+        return lbl;
     }
 }

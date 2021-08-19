@@ -84,4 +84,19 @@
     -fx-background-color: #8c62d9;
 }
 
+/*Custom checkbox*/
+.check-box .box {
+    -fx-background-color: #333333;
+    -fx-border-color: #333333;
+    -fx-border-radius: 5px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #333333;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #8c62d9;
+}
+
 /**/
