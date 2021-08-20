@@ -58,7 +58,7 @@ public class LateralDashboard implements Initializable {
         if (e.getSource().equals(this.imgProfile)) {
             if (this.container.getRight() == null) {
                 Parent sidebar;
-                var uri = "/view/dashboard/lateralDashboard.fxml";
+                var uri = "/view/dashboard/lateralBarUser.fxml";
                 try {
                     sidebar = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource(uri)));
                     this.container.setRight(sidebar);

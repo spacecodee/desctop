@@ -72,6 +72,26 @@
     -fx-background-radius: 10px;
 }
 
+.box-notification {
+    -fx-padding: 5px;
+    -fx-background-color: #8c62d9;
+    -fx-background-radius: 100%;
+}
+
+.box-card-section-user {
+    -fx-background-color: #1c1c1c;
+    -fx-padding: 5px 15px;
+    -fx-background-radius: 10px;
+}
+
+.box-card-section-user:hover {
+    -fx-background-color: #333333;
+}
+
+.box-card-section-user:pressed {
+    -fx-background-color: #8c62d9;
+}
+
 /*Custom slide*/
 #custom-slider .thumb {
     /*-fx-background-image: url("https://i.imgur.com/SwDjIg7.png");
