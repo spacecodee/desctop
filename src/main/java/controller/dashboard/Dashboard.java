@@ -3,12 +3,11 @@ package controller.dashboard;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class Dashboard implements Initializable {
@@ -22,13 +21,16 @@ public class Dashboard implements Initializable {
     }
 
     private void addLateralPane() {
-        Parent sidebar;
         var uri = "/view/dashboard/lateralDashboard.fxml";
         try {
-            sidebar = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource(uri)));
-            this.container.setLeft(sidebar);
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(this.getClass().getResource(uri));
+            VBox vBox = fxmlLoader.load();
+            this.container.setLeft(vBox);
+
+            LateralDashboard lateralDashboard = fxmlLoader.getController();
+            lateralDashboard.setContainer(this.container);
         } catch (IOException ex) {
-            System.out.println("**************");
             ex.printStackTrace(System.out);
         }
     }
