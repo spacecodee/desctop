@@ -97,6 +97,7 @@
 
 .check-box:selected .box {
     -fx-background-color: #8c62d9;
+    -fx-border-width: 0;
 }
 
 /**/
