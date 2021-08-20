@@ -1,22 +1,25 @@
 package controller.dashboard;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
-import javafx.scene.control.Button;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
 import utils.Images;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class LateralDashboard implements Initializable {
@@ -39,14 +42,34 @@ public class LateralDashboard implements Initializable {
     @FXML
     private GridPane gridGenre;
 
+    private BorderPane container;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Images.borderRadiusImgProfile(this.imgProfile);
 
         slideMinPrice.valueProperty().addListener((ov, oldVal, newVal) -> lblMinPrice.setText(this.roundNumbers(newVal)));
         slideMaxPrice.valueProperty().addListener((ov, oldVal, newVal) -> lblMaxPrice.setText(this.roundNumbers(newVal)));
-        //this.boxGenre();
         this.addGridPaneGenre();
+    }
+
+    @FXML
+    void showProfileMenu(MouseEvent e) {
+        if (e.getSource().equals(this.imgProfile)) {
+            if (this.container.getRight() == null) {
+                Parent sidebar;
+                var uri = "/view/dashboard/lateralDashboard.fxml";
+                try {
+                    sidebar = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource(uri)));
+                    this.container.setRight(sidebar);
+                } catch (IOException ex) {
+                    ex.printStackTrace(System.out);
+                }
+            } else {
+                this.container.setRight(null);
+            }
+
+        }
     }
 
     private String roundNumbers(Number num) {
@@ -98,5 +121,10 @@ public class LateralDashboard implements Initializable {
         lbl.setAlignment(Pos.CENTER);
         lbl.setCursor(Cursor.HAND);
         return lbl;
+    }
+
+    // getters and setters
+    public void setContainer(BorderPane container) {
+        this.container = container;
     }
 }
