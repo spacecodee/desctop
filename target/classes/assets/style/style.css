@@ -47,10 +47,19 @@
 }
 
 /*Buttons*/
-.custom-button {
+.custom-button,
+.custom-button-bar-user {
     -fx-background-color: #333333;
     -fx-padding: 5px 10px;
     -fx-background-radius: 10px;
+}
+
+.custom-button-bar-user:hover {
+    -fx-background-color: #8c62d9;
+}
+
+.custom-button-bar-user:pressed {
+    -fx-background-color: #333333;
 }
 
 /*Box custom*/
@@ -72,6 +81,10 @@
     -fx-background-radius: 10px;
 }
 
+.box-not-notification {
+    -fx-background-color: #1c1c1c;
+}
+
 .box-notification {
     -fx-padding: 5px;
     -fx-background-color: #8c62d9;
@@ -89,10 +102,6 @@
 }
 
 .box-card-section-user:pressed {
-    -fx-background-color: #8c62d9;
-}
-
-.box-card-section-user:odd {
     -fx-background-color: #8c62d9;
 }
 

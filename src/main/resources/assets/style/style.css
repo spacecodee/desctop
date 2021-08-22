@@ -47,10 +47,24 @@
 }
 
 /*Buttons*/
-.custom-button {
+.custom-button,
+.custom-button-bar-user {
     -fx-background-color: #333333;
     -fx-padding: 5px 10px;
     -fx-background-radius: 10px;
+}
+
+.custom-button-bar-user:hover {
+    -fx-background-color: #8c62d9;
+}
+
+.custom-button-bar-user:pressed {
+    -fx-background-color: #333333;
+}
+
+.custom-button-menu {
+    -fx-background-color: #2a292f;
+    -fx-border-width: 0;
 }
 
 /*Box custom*/
@@ -70,6 +84,10 @@
 .box-genre-new {
     -fx-background-color: #333333;
     -fx-background-radius: 10px;
+}
+
+.box-not-notification {
+    -fx-background-color: #1c1c1c;
 }
 
 .box-notification {
@@ -118,6 +136,14 @@
 .check-box:selected .box {
     -fx-background-color: #8c62d9;
     -fx-border-width: 0;
+}
+
+/*Custom text-field*/
+.custom-text-field {
+    -fx-background-color: #505050;
+    -fx-background-radius: 15px;
+    -fx-padding: 5px 15px;
+    -fx-text-fill: #2a2a2a;
 }
 
 /*Scroll pane transparent*/
