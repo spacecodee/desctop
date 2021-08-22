@@ -31,10 +31,26 @@
 }
 
 /*Text*/
-.text-title {
+.text-title,
+.text-h1,
+.text-h2 {
     -fx-text-fill: #fefefe;
     -fx-font-size: 20px;
 }
+
+.text-h1 {
+    -fx-font-size: 40px;
+}
+
+.text-h2,
+.text-h2-2 {
+    -fx-font-size: 30px;
+}
+
+.text-h2-2 {
+    -fx-text-fill: #8c62d9;
+}
+
 
 .text-normal,
 .text-money {
@@ -52,6 +68,12 @@
     -fx-background-color: #333333;
     -fx-padding: 5px 10px;
     -fx-background-radius: 10px;
+}
+
+.custom-button-menu-shop {
+    -fx-background-color: #8c62d9;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 5px;
 }
 
 .custom-button-bar-user:hover {
@@ -144,6 +166,14 @@
     -fx-background-radius: 15px;
     -fx-padding: 5px 15px;
     -fx-text-fill: #2a2a2a;
+}
+
+/*center menu*/
+.center-menu {
+    -fx-background-image: url("/assets/img/back-menu.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: auto;
+    -fx-background-position: center center;
 }
 
 /*Scroll pane transparent*/

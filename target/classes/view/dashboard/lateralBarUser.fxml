@@ -9,113 +9,137 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="250.0" spacing="20.0" styleClass="lateral-color" stylesheets="@../../assets/style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.LateralBarUser">
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0"
+      styleClass="lateral-color" stylesheets="@../../assets/style/style.css" xmlns="http://javafx.com/javafx/11"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.LateralBarUser">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" VBox.vgrow="ALWAYS">
-        <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" VBox.vgrow="ALWAYS">
-                <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0" VBox.vgrow="ALWAYS">
-                    <Label fx:id="lblBtnProfile" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Perfil" HBox.hgrow="ALWAYS">
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308"
+                maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
+        <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+              minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+                  minWidth="-Infinity" spacing="10.0" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                      spacing="15.0" VBox.vgrow="ALWAYS">
+                    <Label fx:id="lblBtnProfile" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Perfil"
+                           HBox.hgrow="ALWAYS">
                         <styleClass>
-                            <String fx:value="box-card-section-user" />
-                            <String fx:value="font-normal" />
-                            <String fx:value="text-normal" />
+                            <String fx:value="box-card-section-user"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
                         </styleClass>
                     </Label>
-                    <Label fx:id="lblProfileNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
+                    <Label fx:id="lblProfileNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0"
+                           layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
                         <styleClass>
-                            <String fx:value="box-not-notification" />
-                            <String fx:value="font-normal" />
-                            <String fx:value="text-normal" />
+                            <String fx:value="box-not-notification"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
                         </styleClass>
                     </Label>
                 </HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0">
-                    <children>
-                        <Label fx:id="lblBtnFriends" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Amigos" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="box-card-section-user" />
-                                <String fx:value="font-normal" />
-                                <String fx:value="text-normal" />
-                            </styleClass>
-                        </Label>
-                        <Label fx:id="lblFriendsNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="box-not-notification" />
-                                <String fx:value="font-normal" />
-                                <String fx:value="text-normal" />
-                            </styleClass>
-                        </Label>
-                    </children>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308"
+                      maxWidth="1.7976931348623157E308" spacing="15.0">
+                    <Label fx:id="lblBtnFriends" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+                           text="Amigos" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="box-card-section-user"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
+                        </styleClass>
+                    </Label>
+                    <Label fx:id="lblFriendsNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0"
+                           layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="box-not-notification"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
+                        </styleClass>
+                    </Label>
                 </HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0">
-                    <children>
-                        <Label fx:id="lblBtnMsg" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Mensajes" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="box-card-section-user" />
-                                <String fx:value="font-normal" />
-                                <String fx:value="text-normal" />
-                            </styleClass>
-                        </Label>
-                        <Label fx:id="lblMsgNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="box-not-notification" />
-                                <String fx:value="font-normal" />
-                                <String fx:value="text-normal" />
-                            </styleClass>
-                        </Label>
-                    </children>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" maxHeight="1.7976931348623157E308"
+                      maxWidth="1.7976931348623157E308" spacing="15.0">
+                    <Label fx:id="lblBtnMsg" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+                           text="Mensajes" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="box-card-section-user"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
+                        </styleClass>
+                    </Label>
+                    <Label fx:id="lblMsgNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0"
+                           layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="box-not-notification"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
+                        </styleClass>
+                    </Label>
                 </HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0">
-                    <children>
-                        <Label fx:id="lblBtnGoals" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Metas" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="box-card-section-user" />
-                                <String fx:value="font-normal" />
-                                <String fx:value="text-normal" />
-                            </styleClass>
-                        </Label>
-                        <Label fx:id="lblGoalsNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="box-not-notification" />
-                                <String fx:value="font-normal" />
-                                <String fx:value="text-normal" />
-                            </styleClass>
-                        </Label>
-                    </children>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" maxHeight="1.7976931348623157E308"
+                      maxWidth="1.7976931348623157E308" spacing="15.0">
+                    <Label fx:id="lblBtnGoals" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Metas"
+                           HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="box-card-section-user"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
+                        </styleClass>
+                    </Label>
+                    <Label fx:id="lblGoalsNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0"
+                           layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="box-not-notification"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
+                        </styleClass>
+                    </Label>
                 </HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="145.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="15.0">
-                    <children>
-                        <Label fx:id="lblBtnFavorite" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Favoritos" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="box-card-section-user" />
-                                <String fx:value="font-normal" />
-                                <String fx:value="text-normal" />
-                            </styleClass>
-                        </Label>
-                        <Label fx:id="lblFavoriteNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="box-not-notification" />
-                                <String fx:value="font-normal" />
-                                <String fx:value="text-normal" />
-                            </styleClass>
-                        </Label>
-                    </children>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="145.0" maxHeight="1.7976931348623157E308"
+                      maxWidth="1.7976931348623157E308" spacing="15.0">
+                    <Label fx:id="lblBtnFavorite" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308"
+                           maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+                           text="Favoritos" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="box-card-section-user"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
+                        </styleClass>
+                    </Label>
+                    <Label fx:id="lblFavoriteNotification" alignment="CENTER" contentDisplay="RIGHT" layoutX="11.0"
+                           layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
+                        <styleClass>
+                            <String fx:value="box-not-notification"/>
+                            <String fx:value="font-normal"/>
+                            <String fx:value="text-normal"/>
+                        </styleClass>
+                    </Label>
                 </HBox>
             </VBox>
-            <Line endX="100.0" fill="#333333" startX="-100.0" stroke="#333333" strokeWidth="2.0" />
-         <Label fx:id="lblBtnFavorite1" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Cerrar Sesión">
-            <styleClass>
-               <String fx:value="custom-button-bar-user" />
-               <String fx:value="font-normal" />
-               <String fx:value="text-normal" />
-            </styleClass>
-            <cursor>
-               <Cursor fx:constant="HAND" />
-            </cursor>
-         </Label>
+            <Line endX="100.0" fill="#333333" startX="-100.0" stroke="#333333" strokeWidth="2.0"/>
+            <Label fx:id="btnCloseSesion" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308"
+                   maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+                   onMouseClicked="#closeSessionOnClick" text="Cerrar Sesión" VBox.vgrow="ALWAYS">
+                <styleClass>
+                    <String fx:value="custom-button-bar-user"/>
+                    <String fx:value="font-normal"/>
+                    <String fx:value="text-normal"/>
+                </styleClass>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Label>
         </VBox>
     </ScrollPane>
 </VBox>
