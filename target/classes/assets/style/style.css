@@ -1,5 +1,5 @@
 .main-color {
-    -fx-background-color: #2a292f;
+    -fx-background-color: #232426;
 }
 
 .lateral-color {
@@ -33,7 +33,9 @@
 /*Text*/
 .text-title,
 .text-h1,
-.text-h2 {
+.text-h2,
+.text-h3,
+.text-h4 {
     -fx-text-fill: #fefefe;
     -fx-font-size: 20px;
 }
@@ -51,6 +53,23 @@
     -fx-text-fill: #8c62d9;
 }
 
+.text-h3,
+.text-h3-2 {
+    -fx-font-size: 20px;
+}
+
+.text-h3-2 {
+    -fx-text-fill: #7c7f87;
+}
+
+.text-h3-2-1 {
+    -fx-font-size: 20px;
+    -fx-text-fill: #8c62d9;
+}
+
+.text-h4 {
+    -fx-font-size: 15px;
+}
 
 .text-normal,
 .text-money {
@@ -76,6 +95,12 @@
     -fx-background-radius: 5px;
 }
 
+.button-add-card {
+    -fx-background-color: #8c62d9;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 15px;
+}
+
 .custom-button-bar-user:hover {
     -fx-background-color: #8c62d9;
 }
@@ -85,8 +110,13 @@
 }
 
 .custom-button-menu {
-    -fx-background-color: #2a292f;
+    -fx-background-color: #232426;
     -fx-border-width: 0;
+}
+
+.principal-game-card {
+    -fx-background-color: #282b30;
+    -fx-background-radius: 10px;
 }
 
 /*Box custom*/
@@ -96,11 +126,17 @@
     -fx-background-radius: 10px;
 }
 
-.box-genre {
+.box-genre,
+.box-order-by ,
+.box-product-card {
     -fx-padding: 5px 10px;
     -fx-border-color: #333333;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
+}
+
+.box-order-by {
+    -fx-background-color: #2a292f;
 }
 
 .box-genre-new {
@@ -110,6 +146,11 @@
 
 .box-not-notification {
     -fx-background-color: #1c1c1c;
+}
+
+.box-product-card {
+    -fx-background-color: #333333;
+    -fx-background-radius: 30px;
 }
 
 .box-notification {
@@ -130,6 +171,12 @@
 
 .box-card-section-user:pressed {
     -fx-background-color: #8c62d9;
+}
+
+.content-box {
+    -fx-padding: 10px 15px;
+    -fx-background-color: #282b30;
+    -fx-background-radius: 10px;
 }
 
 /*Custom slide*/
