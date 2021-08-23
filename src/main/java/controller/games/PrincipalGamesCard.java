@@ -41,6 +41,34 @@ public class PrincipalGamesCard implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Images.borderRadiusImgProfile(this.imgGame, 50);
+
+    }
+
+    public ImageView getImgGame() {
+        return imgGame;
+    }
+
+    public Label getLblName() {
+        return lblName;
+    }
+
+    public Label getLblNewPrice() {
+        return lblNewPrice;
+    }
+
+    public Label getLblOldPrice() {
+        return lblOldPrice;
+    }
+
+    public Label getLblDescription() {
+        return lblDescription;
+    }
+
+    public Button getLblGenre1() {
+        return lblGenre1;
+    }
+
+    public Button getLblGenre2() {
+        return lblGenre2;
     }
 }
