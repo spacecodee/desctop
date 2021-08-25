@@ -13,7 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         final int height = 850;
-        final int width = 1200;
+        final int width = 1400;
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/dashboard/dashboard.fxml")));
         stage.setTitle("Hello World");
@@ -22,7 +22,6 @@ public class Main extends Application {
         stage.setMinHeight(height);
         stage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);

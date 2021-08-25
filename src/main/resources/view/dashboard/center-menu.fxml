@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" styleClass="main-color" stylesheets="@../../assets/style/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.CenterMenu">
+    <children>
+        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" spacing="40.0" VBox.vgrow="ALWAYS">
+            <children>
+                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="custom-text-field" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                            <image>
+                                <Image url="@../../assets/icons/search.png" />
+                            </image>
+                        </ImageView>
+                        <TextField maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" promptText="Buscar" HBox.hgrow="ALWAYS">
+                            <styleClass>
+                                <String fx:value="custom-text-field" />
+                                <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                            </styleClass>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Home" HBox.hgrow="ALWAYS">
+                            <styleClass>
+                                <String fx:value="custom-button-menu" />
+                                <String fx:value="font-bold" />
+                                <String fx:value="text-normal" />
+                            </styleClass>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Pagos" HBox.hgrow="ALWAYS">
+                            <styleClass>
+                                <String fx:value="custom-button-menu" />
+                                <String fx:value="font-bold" />
+                                <String fx:value="text-normal" />
+                            </styleClass>
+                        </Button>
+                        <Button layoutX="62.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Comprar" HBox.hgrow="ALWAYS">
+                            <styleClass>
+                                <String fx:value="custom-button-menu" />
+                                <String fx:value="font-bold" />
+                                <String fx:value="text-normal" />
+                            </styleClass>
+                        </Button>
+                        <Button layoutX="114.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Catálogo" HBox.hgrow="ALWAYS">
+                            <styleClass>
+                                <String fx:value="custom-button-menu" />
+                                <String fx:value="font-bold" />
+                                <String fx:value="text-normal" />
+                            </styleClass>
+                        </Button>
+                        <Button layoutX="166.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Acerca de" HBox.hgrow="ALWAYS">
+                            <styleClass>
+                                <String fx:value="custom-button-menu" />
+                                <String fx:value="font-bold" />
+                                <String fx:value="text-normal" />
+                            </styleClass>
+                        </Button>
+                        <Pane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="-4.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" x="10.0">
+                                    <image>
+                                        <Image url="@../../assets/icons/basket.png" />
+                                    </image>
+                                </ImageView>
+                                <Label alignment="CENTER" layoutX="18.0" layoutY="-6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0" styleClass="box-notification" text="4" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                    </children>
+                </HBox>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Tienda Online" VBox.vgrow="ALWAYS">
+                            <styleClass>
+                                <String fx:value="font-bold" />
+                                <String fx:value="text-h1" />
+                            </styleClass>
+                        </Label>
+                        <Label contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Crea Tu">
+                            <styleClass>
+                                <String fx:value="font-bold" />
+                                <String fx:value="text-h2" />
+                            </styleClass>
+                            <graphic>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="text-h2-2" text="Personaje" />
+                            </graphic>
+                        </Label>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Empieza a comprar" VBox.vgrow="ALWAYS">
+                            <styleClass>
+                                <String fx:value="custom-button-menu-shop" />
+                                <String fx:value="font-bold" />
+                                <String fx:value="text-normal" />
+                            </styleClass>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+        </HBox>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="60.0" styleClass="content-box" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Ordenar por:" HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </Label>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Fecha" HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="box-order-by" />
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </Button>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Precio" HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="box-order-by" />
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </Button>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Tipo" HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="box-order-by" />
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="20.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <CheckBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Armor">
+                     <styleClass>
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </CheckBox>
+                  <CheckBox layoutX="97.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Gloves">
+                     <styleClass>
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </CheckBox>
+                  <CheckBox layoutX="159.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Footwear">
+                     <styleClass>
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </CheckBox>
+                  <CheckBox layoutX="221.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="HelmentsvPants">
+                     <styleClass>
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </CheckBox>
+                  <CheckBox layoutX="292.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Shields">
+                     <styleClass>
+                        <String fx:value="font-normal" />
+                        <String fx:value="text-normal" />
+                     </styleClass>
+                  </CheckBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" VBox.vgrow="ALWAYS">
+         <content>
+            <FlowPane fx:id="fPaneGamesCards" hgap="30.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1000.0" prefWrapLength="500.0" rowValignment="TOP" vgap="20.0" />
+         </content>
+      </ScrollPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+    </padding>
+</VBox>

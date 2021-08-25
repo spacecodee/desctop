@@ -6,20 +6,15 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
-import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.Region;
+import javafx.scene.layout.*;
 import utils.Images;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class LateralDashboard implements Initializable {
@@ -57,11 +52,18 @@ public class LateralDashboard implements Initializable {
     void showProfileMenu(MouseEvent e) {
         if (e.getSource().equals(this.imgProfile)) {
             if (this.container.getRight() == null) {
-                Parent sidebar;
-                var uri = "/view/dashboard/lateralDashboard.fxml";
+                var uri = "/view/dashboard/lateralBarUser.fxml";
                 try {
-                    sidebar = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource(uri)));
-                    this.container.setRight(sidebar);
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+                    fxmlLoader.setLocation(this.getClass().getResource(uri));
+                    VBox vBox = fxmlLoader.load();
+                    this.container.setRight(vBox);
+
+                    LateralBarUser lateralBarUser = fxmlLoader.getController();
+                    String[] data = {
+                            "0", "2", "4", "6", "8", "10", "24"
+                    };
+                    lateralBarUser.addInfo(data);
                 } catch (IOException ex) {
                     ex.printStackTrace(System.out);
                 }
