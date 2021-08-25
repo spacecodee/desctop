@@ -71,16 +71,6 @@
     -fx-font-size: 15px;
 }
 
-.text-normal,
-.text-money {
-    -fx-text-fill: #fefefe;
-    -fx-font-size: 16px;
-}
-
-.text-money {
-    -fx-text-fill: #8c62d9;
-}
-
 /*Buttons*/
 .custom-button,
 .custom-button-bar-user {
@@ -127,7 +117,7 @@
 }
 
 .box-genre,
-.box-order-by ,
+.box-order-by,
 .box-product-card {
     -fx-padding: 5px 10px;
     -fx-border-color: #333333;
@@ -213,6 +203,17 @@
     -fx-background-radius: 15px;
     -fx-padding: 5px 15px;
     -fx-text-fill: #2a2a2a;
+}
+
+/*text*/
+.text-normal,
+.text-money {
+    -fx-text-fill: #fefefe;
+    -fx-font-size: 16px;
+}
+
+.text-money {
+    -fx-text-fill: #8c62d9;
 }
 
 /*center menu*/

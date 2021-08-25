@@ -44,7 +44,7 @@ public class CenterMenu implements Initializable {
         };
 
         try {
-            controller.games.PrincipalGamesCard principalGameCard = null;
+            controller.games.PrincipalGamesCard principalGameCard;
             for (int i = 0; i < fxmlLoaders.length; i++) {
                 fxmlLoaders[i] = new FXMLLoader();
                 fxmlLoaders[i].setLocation(this.getClass().getResource(uri));
